@@ -1,5 +1,13 @@
 public class Byte {
-    public Byte(int line) {
-        
-    }    
+    private String binario;
+    private int numero;
+
+    Byte(int numero) {
+        this.binario = Integer.toBinaryString(numero);
+        this.numero = numero;
+    }
+    
+    public int getLSB() {
+        return this.numero % 2;
+    }
 }
