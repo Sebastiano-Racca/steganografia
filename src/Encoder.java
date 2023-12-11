@@ -8,7 +8,11 @@ public class Encoder {
     }
 
     public void writeMessage() {
-        // TODO
+        Byte[] carattere = new Byte[8];
+
+        for (int i = 0; i < carattere.length; i++) {
+            carattere[i] = this.pgm.readNextByte();
+        }
     }
 
 }
