@@ -40,11 +40,9 @@ public class PGM {
         try {
             String line;
 
-            while ((line = this.reader.readLine()) != null) {
-                
-            }
+            line = this.reader.readLine();
 
-            return new Byte();
+            return new Byte(Integer.parseInt(line));
         } catch(IOException e) {
             System.err.println("C'è stato un errore: " + e.getMessage());
             System.exit(1);
