@@ -1,3 +1,5 @@
-public class Carattere extends Byte {
-    
+public class Carattere {
+    Carattere(Byte[] bytes) {
+        
+    }
 }

@@ -36,13 +36,13 @@ public class PGM {
         return null;
     }
 
+    public String[] getHeader() {
+        // TODO: restituisce l'header del PGM si interrompe al primo 255 del file, il resto sono pixel, definisci anche il tipo di ritorno della funzione
+    }
+
     public Byte readNextByte() {
         try {
-            String line;
-
-            line = this.reader.readLine();
-
-            return new Byte(Integer.parseInt(line));
+            return new Byte(Integer.parseInt(this.reader.readLine()));
         } catch(IOException e) {
             System.err.println("C'è stato un errore: " + e.getMessage());
             System.exit(1);
@@ -51,5 +51,8 @@ public class PGM {
         return null;
     }
 
+    public void writeByte(Byte buff) {
+        // TODO: scrivi la funzione che scrive un byte nel file di destinazione
+    }
     
 }
