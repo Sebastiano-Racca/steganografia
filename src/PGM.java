@@ -62,22 +62,19 @@ public class PGM {
     }
 
     public Byte readNextByte() {
+        return new Byte(Integer.parseInt(this.readNextLine()));
+    }
+
+    public void writeLine(String line) {
         try {
-            return new Byte(Integer.parseInt(this.reader.readLine()));
+            this.writer.write(line);
         } catch(IOException e) {
             System.err.println("C'è stato un errore: " + e.getMessage());
             System.exit(1);
         }
-
-        return null;
     }
 
     public void writeByte(Byte buff) {
-        try {
-            this.writer.write(buff.toString());
-        } catch(IOException e) {
-            System.err.println("C'è stato un errore: " + e.getMessage());
-            System.exit(1);
-        }
+        this.writeLine(buff.toString());
     }
 }
