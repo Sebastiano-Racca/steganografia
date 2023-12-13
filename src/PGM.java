@@ -73,8 +73,11 @@ public class PGM {
     }
 
     public void writeByte(Byte buff) {
-        // TODO: scrivi la funzione che scrive un byte nel file di destinazione
-        
+        try {
+            this.writer.write(buff.toString());
+        } catch(IOException e) {
+            System.err.println("C'è stato un errore: " + e.getMessage());
+            System.exit(1);
+        }
     }
-    
 }

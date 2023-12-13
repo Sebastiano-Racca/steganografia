@@ -10,4 +10,11 @@ public class Byte {
     public int getLSB() {
         return this.numero % 2;
     }
+
+
+
+    @Override
+    public String toString() {
+        return String.valueOf(this.numero);
+    }
 }
