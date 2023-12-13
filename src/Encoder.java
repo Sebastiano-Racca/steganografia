@@ -8,9 +8,8 @@ public class Encoder {
     }
 
     public void encode() {
-        // TODO: usa la classe Carattere come rappresenzazione di un singolo carattere composto da 8 Byte
         // TODO: usa PGM.writeByte() per scrivere ogni carattere all'interno del file, ricorda di includere l'header
-        
+        String[] header = this.pgm.getHeader();
         Byte[] bytes = new Byte[8];
 
         for (int i = 0; i < bytes.length; i++) {
@@ -18,7 +17,11 @@ public class Encoder {
         }
 
         Carattere carattere = new Carattere(bytes);
-
     }
 
-}
+    public static String charToByteString(char carattere) {
+        return String.format("%02X", (int) carattere);
+    }
+
+
+    }
