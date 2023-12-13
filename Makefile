@@ -12,15 +12,16 @@ MAIN_CLASS := Main
 quickrun: build run
 
 build:
-	@echo "Compiling Java source files..."
+	@echo "Compilando..."
 	@$(JAVAC) $(CP) -d $(BIN_DIR) $(JAVA_FILES)
+    @echo "Fatto!"
 
 run:
-	@echo "Running the main application..."
 	@$(JAVA) $(CP) $(MAIN_CLASS)
 
 clean:
-	@echo "Cleaning up..."
+	@echo "Rimuovendo i file binari..."
 	@rm -rf $(BIN_DIR)
+    @echo "Fatto!"
 
 .PHONY: quickrun build run clean
