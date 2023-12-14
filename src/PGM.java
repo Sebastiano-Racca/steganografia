@@ -78,7 +78,7 @@ public class PGM {
         this.writeLine(buff.toString());
     }
 
-    private void writeHeader() {
+    public void writeHeader() {
         String[] headerLines = getHeader();
         
         for (int i = 0; i < headerLines.length; i++) {
