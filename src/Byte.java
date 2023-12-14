@@ -11,8 +11,6 @@ public class Byte {
         return this.numero % 2;
     }
 
-
-
     @Override
     public String toString() {
         return String.valueOf(this.numero);
