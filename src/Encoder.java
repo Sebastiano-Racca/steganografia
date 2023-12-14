@@ -7,9 +7,14 @@ public class Encoder {
         this.message = message;
     }
 
+    private void writeChar(Carattere carattere) {
+        writeByte(carattere.getByteAt());
+    }
+
     public void encode() {
-        // TODO: usa PGM.writeByte() per scrivere ogni carattere all'interno del file, ricorda di includere l'header
+        // TODO: usa writeHeader() e writeChar() per scrivere ogni linea del PGM, usa Carattere.encode() per fare l'encoding di un carattere
         String[] header = this.pgm.getHeader();
+        
         Byte[] bytes = new Byte[8];
 
         for (int i = 0; i < bytes.length; i++) {
@@ -23,5 +28,4 @@ public class Encoder {
         return String.format("%02X", (int) carattere);
     }
 
-
-    }
+}
