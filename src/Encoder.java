@@ -8,7 +8,9 @@ public class Encoder {
     }
 
     private void writeChar(Carattere carattere) {
-        writeByte(carattere.getByteAt());
+        for (int i = 0; i < 8; i++) {
+            this.pgm.writeByte(carattere.getByteAt(i));
+        }
     }
 
     public void encode() {
@@ -27,5 +29,4 @@ public class Encoder {
     public static String charToByteString(char carattere) {
         return String.format("%02X", (int) carattere);
     }
-
 }

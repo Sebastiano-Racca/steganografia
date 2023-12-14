@@ -1,6 +1,8 @@
 public class Carattere {
+    private Byte[] bytes;
+
     Carattere(Byte[] bytes) {
-        
+        this.bytes = bytes;
     }
 
     public void encode(char c) {
@@ -8,6 +10,6 @@ public class Carattere {
     }
 
     public Byte getByteAt(int indice) {
-        // TODO: restituisce il Byte all'indice specificato
+        return bytes[indice];
     }
 }
