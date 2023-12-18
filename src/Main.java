@@ -21,6 +21,7 @@ public class Main {
         }
 
         encoder.encode();
+        pgm.close();
         System.out.println("Successo!");
 
     }

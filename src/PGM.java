@@ -68,6 +68,7 @@ public class PGM {
     public void writeLine(String line) {
         try {
             this.writer.write(line);
+            this.writer.newLine();
         } catch(IOException e) {
             System.err.println("C'è stato un errore: " + e.getMessage());
             System.exit(1);
@@ -81,9 +82,10 @@ public class PGM {
     public void writeHeader() {
         String[] headerLines = getHeader();
         
-        for (int i = 0; i < headerLines.length; i++) {
-                writeLine(headerLines[i]);
+        for (int i = 0; (i < headerLines.length && headerLines[i] != null); i++) {
+            writeLine(headerLines[i]);
         }
+
     }  
 
     public void writeRemainingBytes() {
@@ -96,6 +98,16 @@ public class PGM {
             System.err.println("C'è stato un errore: " + e.getMessage() + "!");
             System.exit(1);
         }   
+    }
+
+    public void close() {
+        try {
+            this.reader.close();
+            this.writer.close();
+        } catch (IOException e) {
+            System.err.println("C'è stato un errore: " + e.getMessage() + "!");
+            System.exit(1);
+        }  
     }
 
 }

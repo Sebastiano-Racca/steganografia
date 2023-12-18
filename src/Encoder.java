@@ -4,7 +4,7 @@ public class Encoder {
 
     Encoder(PGM pgm, String message) {
         this.pgm = pgm;
-        this.message = message + Character.MIN_VALUE;
+        this.message = message + (char)(00000000);
     }
 
     private void writeChar(Carattere carattere) {
@@ -14,7 +14,6 @@ public class Encoder {
     }
 
     public void encode() {
-        // TODO: usa writeHeader() e writeChar() per scrivere ogni linea del PGM, usa Carattere.encode() per fare l'encoding di un carattere
         this.pgm.writeHeader();
 
         for (int i = 0; i < this.message.length(); i++) {
@@ -28,6 +27,7 @@ public class Encoder {
             carattere.encode(current);
             this.writeChar(carattere);
         }
+        
         this.pgm.writeRemainingBytes();
     }
 

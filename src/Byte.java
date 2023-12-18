@@ -31,4 +31,12 @@ public class Byte {
         return String.valueOf(this.numero);
     }
 
+    public int getNumero() {
+        return this.numero;
+    }
+
+    public void setNumero(int num) {
+        this.numero = num;
+    }
+
 }

@@ -14,14 +14,12 @@ quickrun: build run
 build:
 	@echo "Compilando..."
 	@$(JAVAC) $(CP) -d $(BIN_DIR) $(JAVA_FILES)
-    @echo "Fatto!"
 
 run:
-	@$(JAVA) $(CP) $(MAIN_CLASS)
+	@$(JAVA) $(CP) $(MAIN_CLASS) "gatto.pgm" "gatto2.pgm" "ci"
 
 clean:
 	@echo "Rimuovendo i file binari..."
 	@rm -rf $(BIN_DIR)
-    @echo "Fatto!"
 
 .PHONY: quickrun build run clean
