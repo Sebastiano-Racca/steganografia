@@ -84,6 +84,18 @@ public class PGM {
         for (int i = 0; i < headerLines.length; i++) {
                 writeLine(headerLines[i]);
         }
-    }        
+    }  
+
+    public void writeRemaningBytes() {
+        String line;
+        try {
+            while((line = this.reader.readLine()) != null) {
+                this.writeLine(line);
+            }
+        } catch (IOException e) {
+            System.err.println("C'è stato un errore: " + e.getMessage() + "!");
+            System.exit(1);
+        }   
+    }
 
 }
