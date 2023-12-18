@@ -13,10 +13,9 @@ public class Main {
             pgm = new PGM(args[0], args[1]);
             encoder = new Encoder(pgm, args[2]);
 
-        
         } catch (ArrayIndexOutOfBoundsException e) {
             System.err.println("Sintassi errata:");
-            System.err.println("make run [source] [destination] [message]");
+            System.err.println("make run SOURCE=[source] DESTINATION=[destination] MESSAGE[message]");
             System.exit(1);
         }
 

@@ -6,15 +6,13 @@ public class Carattere {
     }
 
     public void encode(char c) {
+        String binChar = Encoder.charToBinaryString(c);
 
         for (int i = 0; i < this.bytes.length; i++) {
-            int lsb = this.bytes[i].getLSB();
-
+            int lsb = Character.getNumericValue(binChar.charAt(i));
             int num = this.bytes[i].getNumero();
 
-            // Set the last bit based on the bitToSet value
-            int result = num & 0b11111111111111111111111111111110 | lsb;
-            // System.out.println(num + "   " + lsb);
+            int result = (num & 0xFE) | lsb;
 
             this.bytes[i].setNumero(result);         
         }
