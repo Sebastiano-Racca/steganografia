@@ -9,6 +9,10 @@ CP := -cp $(BIN_DIR):$(LIB_DIR)/*
 JAVA_FILES := $(wildcard $(SRC_DIR)/*.java)
 MAIN_CLASS := Main
 
+SOURCE := gatto.pgm
+DESTINATION := gatto2.pgm
+MESSAGE := Hello World!
+
 quickrun: build run
 
 build:
@@ -16,7 +20,7 @@ build:
 	@$(JAVAC) $(CP) -d $(BIN_DIR) $(JAVA_FILES)
 
 run:
-	@$(JAVA) $(CP) $(MAIN_CLASS) "gatto.pgm" "gatto2.pgm" "ci"
+	@$(JAVA) $(CP) $(MAIN_CLASS) $(SOURCE) $(DESTINATION) $(MESSAGE)
 
 clean:
 	@echo "Rimuovendo i file binari..."
