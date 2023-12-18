@@ -15,8 +15,8 @@ public class Encoder {
 
     public void encode() {
         // TODO: usa writeHeader() e writeChar() per scrivere ogni linea del PGM, usa Carattere.encode() per fare l'encoding di un carattere
-        String[] header = this.pgm.getHeader();
-        
+        this.pgm.writeHeader();
+
         Byte[] bytes = new Byte[8];
 
         for (int i = 0; i < bytes.length; i++) {
@@ -31,4 +31,4 @@ public class Encoder {
     }
 }
 
-/* Scrivere l'header, fare l'encoding del messaggio, scrivere il messaggio nel nuovo PGM e scrivere tutto il resto dei byte che non sono stati encodati */
+/* fare l'encoding del messaggio, scrivere il messaggio nel nuovo PGM e scrivere tutto il resto dei byte che non sono stati encodati */
