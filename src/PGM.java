@@ -86,7 +86,7 @@ public class PGM {
         }
     }  
 
-    public void writeRemaningBytes() {
+    public void writeRemainingBytes() {
         String line;
         try {
             while((line = this.reader.readLine()) != null) {
