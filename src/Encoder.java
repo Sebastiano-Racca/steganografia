@@ -30,3 +30,5 @@ public class Encoder {
         return String.format("%02X", (int) carattere);
     }
 }
+
+/* Scrivere l'header, fare l'encoding del messaggio, scrivere il messaggio nel nuovo PGM e scrivere tutto il resto dei byte che non sono stati encodati */
