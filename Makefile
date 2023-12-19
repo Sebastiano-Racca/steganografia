@@ -11,7 +11,7 @@ MAIN_CLASS := Main
 
 SOURCE := gatto.pgm
 DESTINATION := gatto2.pgm
-MESSAGE := Hello World!
+MESSAGE := "Ciao Mondo!"
 
 quickrun: build run
 
