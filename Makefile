@@ -10,7 +10,7 @@ JAVA_FILES := $(wildcard $(SRC_DIR)/*.java)
 MAIN_CLASS := Main
 
 SOURCE := gatto.pgm
-DESTINATION := gatto2.pgm
+DESTINATION := out.pgm
 MESSAGE := "Ciao Mondo!"
 
 quickrun: build run
