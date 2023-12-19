@@ -40,5 +40,3 @@ public class Encoder {
         return binaryString.toString();
     }    
 }
-
-/* fare l'encoding del messaggio, scrivere il messaggio nel nuovo PGM e scrivere tutto il resto dei byte che non sono stati encodati */
